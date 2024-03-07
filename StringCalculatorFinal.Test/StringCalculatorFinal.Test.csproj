@@ -22,4 +22,8 @@
         </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\StringCalculatorFinal.Console\StringCalculatorFinal.Console.csproj" />
+    </ItemGroup>
+
 </Project>
