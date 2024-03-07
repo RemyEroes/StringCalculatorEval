@@ -2,9 +2,9 @@ namespace StringCalculatorFinal.Console;
 
 public class StringCalculator
 {
-    public static string Add(string calculatorString)
+    public static string Add(string inputString)
     {
-        if (calculatorString == "0,1")
+        if (inputString == "0,1")
         {
             return "1";
         }
