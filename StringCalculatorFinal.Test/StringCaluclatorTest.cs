@@ -59,19 +59,7 @@ public class StringCaluclatorTest
     [InlineData("-01,0  2,  33 ,  -4 1","Des nombres négatifs sont présents: '-1' en position 1 '-41' en position 4 ")]
     public void TestAPlusNTermesAvecEspacesEtNombresNégatifs(string inputString, string attendu)
     {
-        var resultat = StringCalculator.Add(inputString);
-        Assert.Equal(attendu.ToString(),resultat);
-    }
-
-    [Fact]
-    public void testNombresNegatifsAvecException()
-    {
-        var a = -1;
-        var b = 0;
-        var calculatorString = $"{a},{b}";
-        var attendu = "Des nombres négatifs sont présents: '-1' en position 1 ";
-
-        var exception = Assert.Throws<NombreNegatifException>(() => StringCalculator.Add(calculatorString));
+        var exception = Assert.Throws<NombreNegatifException>(() => StringCalculator.Add(inputString));
         Assert.Equal(attendu, exception.exceptionMessage);
     }
     
