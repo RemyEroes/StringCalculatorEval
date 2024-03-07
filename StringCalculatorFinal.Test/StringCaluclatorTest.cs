@@ -51,29 +51,17 @@ public class StringCaluclatorTest
         var resultat = StringCalculator.Add(inputString);
         Assert.Equal(attendu.ToString(),resultat);
     }
-
-    [Fact]
-    public void TestAvecNombresNégatifs()
+    
+    [Theory]
+    [InlineData("-1 2,0,1", "Des nombres négatifs sont présents: '-12' en position 1 ")]
+    [InlineData(" 19,0 ,61, -1","Des nombres négatifs sont présents: '-1' en position 4 ")]
+    [InlineData("1 4, -6 0,-32, 1   3","Des nombres négatifs sont présents: '-60' en position 2 '-32' en position 3 ")]
+    [InlineData("-01,0  2,  33 ,  -4 1","Des nombres négatifs sont présents: '-1' en position 1 '-41' en position 4 ")]
+    public void TestAPlusNTermesAvecEspacesEtNombresNégatifs(string inputString, string attendu)
     {
-        var a = -1;
-        var b = 1;
-        var calculatorString = $"{a},{b}";
-        var attendu = "Des nombres négatifs sont présents: '-1' en position 1 ";
-        
-        var resultat = StringCalculator.Add(calculatorString);
+        var resultat = StringCalculator.Add(inputString);
         Assert.Equal(attendu.ToString(),resultat);
     }
     
-    [Fact]
-    public void TestAvecNombresNégatifs2()
-    {
-        var a = 1;
-        var b = -1;
-        var calculatorString = $"{a},{b}";
-        var attendu = "Des nombres négatifs sont présents: '-1' en position 2 ";
-        
-        var resultat = StringCalculator.Add(calculatorString);
-        Assert.Equal(attendu.ToString(),resultat);
-    }
 }
 
