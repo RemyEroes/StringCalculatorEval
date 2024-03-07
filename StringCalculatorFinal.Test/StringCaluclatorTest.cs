@@ -15,7 +15,7 @@ public class StringCaluclatorTest
         var attendu = a + b;
         
         var resultat = StringCalculator.Add(calculatorString);
-        Assert.Equal(attendu.ToString(),resultat);
+        Assert.Equal(attendu,resultat);
     }
 }
 
