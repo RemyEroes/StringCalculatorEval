@@ -4,16 +4,12 @@ public class StringCalculator
 {
     public static string Add(string inputString)
     {
-        switch (inputString)
+        var inputArray = inputString.Split(",");
+        var result = 0;
+        foreach (var number in inputArray)
         {
-            case"0,0":
-                return "0";
-            case "0,1":
-                return "1";
-            case "1,0":
-                return "1";
-            default:
-                return "2";
+            result += int.Parse(number);
         }
+        return result.ToString();
     }
 }
