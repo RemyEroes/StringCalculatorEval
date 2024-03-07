@@ -63,5 +63,17 @@ public class StringCaluclatorTest
         var resultat = StringCalculator.Add(calculatorString);
         Assert.Equal(attendu.ToString(),resultat);
     }
+    
+    [Fact]
+    public void TestAvecNombresNégatifs2()
+    {
+        var a = 1;
+        var b = -1;
+        var calculatorString = $"{a},{b}";
+        var attendu = "Des nombres négatifs sont présents: '-1' en position 2 ";
+        
+        var resultat = StringCalculator.Add(calculatorString);
+        Assert.Equal(attendu.ToString(),resultat);
+    }
 }
 
