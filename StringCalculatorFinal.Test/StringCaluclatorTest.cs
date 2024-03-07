@@ -40,23 +40,14 @@ public class StringCaluclatorTest
         var resultat = StringCalculator.Add(inputString);
         Assert.Equal(attendu,resultat);
     }
-
-    [Fact]
-    public void TestAPlusNtermsAvecEspace()
-    {
-        var inputString = "0 , 0,1 ";
-        var attendu = 1;
-        
-        var resultat = StringCalculator.Add(inputString);
-        Assert.Equal(attendu,resultat);
-    }
     
-    [Fact]
-    public void TestAPlusNtermsAvecEspaceEntreNombres()
+    [Theory]
+    [InlineData("1 2,0,1", 13)]
+    [InlineData(" 19,0 ,61, 1",81)]
+    [InlineData("1 4, 0 0,32, 1   3",59)]
+    [InlineData("01,0  2,  33 ,  4 1",77)]
+    public void TestAPlusNTermesAvecEspaces(string inputString, int attendu)
     {
-        var inputString = "1 0 , 3,2 9 ";
-        var attendu = 42;
-        
         var resultat = StringCalculator.Add(inputString);
         Assert.Equal(attendu,resultat);
     }
