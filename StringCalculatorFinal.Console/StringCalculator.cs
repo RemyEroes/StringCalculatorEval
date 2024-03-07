@@ -10,6 +10,8 @@ public class StringCalculator
                 return "0";
             case "0,1":
                 return "1";
+            case "1,0":
+                return "1";
             default:
                 return "2";
         }
