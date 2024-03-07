@@ -26,7 +26,7 @@ public class StringCaluclatorTest
         var attendu = a + b;
         
         var resultat = StringCalculator.Add(calculatorString);
-        Assert.Equal(attendu.ToString(),resultat);
+        Assert.Equal(attendu,resultat);
     }
     
     
@@ -38,7 +38,7 @@ public class StringCaluclatorTest
     public void TestAPlusNTermes(string inputString, int attendu)
     {
         var resultat = StringCalculator.Add(inputString);
-        Assert.Equal(attendu.ToString(),resultat);
+        Assert.Equal(attendu,resultat);
     }
     
     [Theory]
@@ -49,7 +49,7 @@ public class StringCaluclatorTest
     public void TestAPlusNTermesAvecEspaces(string inputString, int attendu)
     {
         var resultat = StringCalculator.Add(inputString);
-        Assert.Equal(attendu.ToString(),resultat);
+        Assert.Equal(attendu,resultat);
     }
     
     [Theory]

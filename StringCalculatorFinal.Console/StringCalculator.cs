@@ -2,7 +2,7 @@ namespace StringCalculatorFinal.Console;
 
 public class StringCalculator
 {
-    public static string Add(string inputString)
+    public static int Add(string inputString)
     {
         var inputArray = inputString.Split(",");
         var result = 0;
@@ -28,7 +28,7 @@ public class StringCalculator
         {
             throw new NombreNegatifException(exceptionsPosition);
         }
-        return result.ToString();
+        return result;
     }
 }
 
