@@ -8,7 +8,9 @@ public class StringCalculator
         var result = 0;
         foreach (var number in inputArray)
         {
-            result += int.Parse(number);
+            var numberWithoutSpaces = number.Replace(" ", "");
+            var intNumber = int.Parse(numberWithoutSpaces);
+            result += intNumber;
         }
         return result;
     }
