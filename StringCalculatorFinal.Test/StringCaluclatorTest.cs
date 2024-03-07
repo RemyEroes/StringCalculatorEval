@@ -11,6 +11,11 @@ public class StringCaluclatorTest
         yield return [0,1];
         yield return [1,0];
         yield return [1,1];
+        
+        Random random = new Random();
+        int randomA = random.Next();
+        int randomB = random.Next();
+        yield return [randomA,randomB];
     }
     
     [Theory]
