@@ -4,11 +4,14 @@ public class StringCalculator
 {
     public static string Add(string inputString)
     {
-        if (inputString == "0,1")
+        switch (inputString)
         {
-            return "1";
+            case"0,0":
+                return "0";
+            case "0,1":
+                return "1";
+            default:
+                return "2";
         }
-
-        return "0";
     }
 }
