@@ -26,21 +26,9 @@ public class StringCalculator
 
         if (exceptionsPosition.Count > 0)
         {
-            //return Exception(exceptionsPosition);
             throw new NombreNegatifException(exceptionsPosition);
         }
         return result.ToString();
-    }
-
-    private static string Exception(List<List<int>> exceptionsPosition)
-    {
-        var exceptionString = "";
-        foreach (var exception in exceptionsPosition)
-        {
-            exceptionString+= $"'{exception[0]}' en position {exception[1]} ";
-        }
-
-        return "Des nombres négatifs sont présents: " + exceptionString;
     }
 }
 
