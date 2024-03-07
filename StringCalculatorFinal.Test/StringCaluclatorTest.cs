@@ -27,5 +27,17 @@ public class StringCaluclatorTest
         var resultat = StringCalculator.Add(calculatorString);
         Assert.Equal(attendu,resultat);
     }
+    
+    [Fact]
+    public void Test1Plus1()
+    {
+        var a = 1;
+        var b = 1;
+        var calculatorString = $"{a},{b}";
+        var attendu = "2";
+
+        var resultat = StringCalculator.Add(calculatorString);
+        Assert.Equal(attendu,resultat);
+    }
 }
 
