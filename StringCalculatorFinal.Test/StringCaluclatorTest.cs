@@ -28,33 +28,16 @@ public class StringCaluclatorTest
         var resultat = StringCalculator.Add(calculatorString);
         Assert.Equal(attendu,resultat);
     }
-
-    [Fact]
-    public void TestAPlusNTermes()
-    {
-        var a = 0;
-        var b = 0;
-        var c = 1;
-        
-        var calculatorString = $"{a},{b},{c}";
-        var attendu = a + b + c;
-        
-        var resultat = StringCalculator.Add(calculatorString);
-        Assert.Equal(attendu,resultat);
-    }
     
-    [Fact]
-    public void TestAPlusNTermes2()
+    
+    [Theory]
+    [InlineData("0,0,1", 1)]
+    [InlineData("1,0,1,1",3)]
+    [InlineData("1,0,3,1",5)]
+    [InlineData("0,0,3,1",4)]
+    public void TestAPlusNTermes(string inputString, int attendu)
     {
-        var a = 1;
-        var b = 0;
-        var c = 1;
-        var d = 1;
-        
-        var calculatorString = $"{a},{b},{c},{d}";
-        var attendu = a + b + c+d;
-        
-        var resultat = StringCalculator.Add(calculatorString);
+        var resultat = StringCalculator.Add(inputString);
         Assert.Equal(attendu,resultat);
     }
 }
