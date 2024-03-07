@@ -50,5 +50,15 @@ public class StringCaluclatorTest
         var resultat = StringCalculator.Add(inputString);
         Assert.Equal(attendu,resultat);
     }
+    
+    [Fact]
+    public void TestAPlusNtermsAvecEspaceEntreNombres()
+    {
+        var inputString = "1 0 , 3,2 9 ";
+        var attendu = 42;
+        
+        var resultat = StringCalculator.Add(inputString);
+        Assert.Equal(attendu,resultat);
+    }
 }
 
