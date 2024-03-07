@@ -26,7 +26,7 @@ public class StringCaluclatorTest
         var attendu = a + b;
         
         var resultat = StringCalculator.Add(calculatorString);
-        Assert.Equal(attendu,resultat);
+        Assert.Equal(attendu.ToString(),resultat);
     }
     
     
@@ -38,7 +38,7 @@ public class StringCaluclatorTest
     public void TestAPlusNTermes(string inputString, int attendu)
     {
         var resultat = StringCalculator.Add(inputString);
-        Assert.Equal(attendu,resultat);
+        Assert.Equal(attendu.ToString(),resultat);
     }
     
     [Theory]
@@ -49,7 +49,7 @@ public class StringCaluclatorTest
     public void TestAPlusNTermesAvecEspaces(string inputString, int attendu)
     {
         var resultat = StringCalculator.Add(inputString);
-        Assert.Equal(attendu,resultat);
+        Assert.Equal(attendu.ToString(),resultat);
     }
 
     [Fact]
@@ -61,7 +61,7 @@ public class StringCaluclatorTest
         var attendu = "Des nombres négatifs sont présents: '-1' en position 1 ";
         
         var resultat = StringCalculator.Add(calculatorString);
-        Assert.Equal(attendu,resultat.ToString());
+        Assert.Equal(attendu.ToString(),resultat);
     }
 }
 

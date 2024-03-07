@@ -2,7 +2,7 @@ namespace StringCalculatorFinal.Console;
 
 public class StringCalculator
 {
-    public static int Add(string inputString)
+    public static string Add(string inputString)
     {
         var inputArray = inputString.Split(",");
         var result = 0;
@@ -10,8 +10,14 @@ public class StringCalculator
         {
             var numberWithoutSpaces = number.Replace(" ", "");
             var intNumber = int.Parse(numberWithoutSpaces);
+
+            if (intNumber < 0)
+            {
+                return "Des nombres négatifs sont présents: '-1' en position 1 ";
+            }
+            
             result += intNumber;
         }
-        return result;
+        return result.ToString();
     }
 }
