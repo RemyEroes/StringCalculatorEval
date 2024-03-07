@@ -26,7 +26,8 @@ public class StringCalculator
 
         if (exceptionsPosition.Count > 0)
         {
-            return Exception(exceptionsPosition);
+            //return Exception(exceptionsPosition);
+            throw new NombreNegatifException(exceptionsPosition);
         }
         return result.ToString();
     }
